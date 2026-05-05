@@ -989,7 +989,7 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
   const typeLabel = contactType === 'facility' ? '施設・企業の方' : contactType === 'nurse' ? '看護師・求職者' : 'その他';
   const body = encodeURIComponent(`【お問い合わせ種別】${typeLabel}\n【お名前】${name}\n【施設名・会社名】${org}\n【メールアドレス】${email}\n\n【お問い合わせ内容】\n${message}`);
   const subject = encodeURIComponent(`【irodori】お問い合わせ：${name}様`);
-  window.location.href = `mailto:info@irodori0305.jp?subject=${subject}&body=${body}`;
+  fetch("https://formspree.io/f/xnjwdong", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name, org, email, message, type: typeLabel }) });
   document.getElementById('contact-form').style.display = 'none';
   document.getElementById('contact-success').style.display = 'block';
 });
