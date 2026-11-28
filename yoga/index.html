@@ -10,15 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --sand:#f7f2ea;
-    --shell:#fffaf4;
-    --sea:#3e7f86;
-    --sea-deep:#24525a;
-    --mist:#d9ebe8;
-    --coral:#e8957a;
-    --ink:#3a3633;
-    --muted:#7b736b;
-    --line:#e6ddd0;
+    --sand:#f3ebe0;
+    --shell:#fbf6ef;
+    --sea:#5f9a94;
+    --sea-deep:#6b4f3f;
+    --mist:#eadccb;
+    --coral:#c98a8f;
+    --ink:#4a3c33;
+    --muted:#8c7b6d;
+    --line:#e5d8c7;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -41,7 +41,7 @@
     min-height:92vh;
     display:flex;align-items:center;
     overflow:hidden;
-    background:linear-gradient(180deg,#e9f3f1 0%,#f7f2ea 70%);
+    background:radial-gradient(ellipse at 20% 85%,rgba(244,196,120,.28) 0%,rgba(244,196,120,0) 45%),linear-gradient(180deg,#efe3d3 0%,#f3ebe0 75%);
   }
   .hero svg.silk{position:absolute;inset:0;width:100%;height:100%}
   .hero .wrap{position:relative;z-index:2;padding-top:60px;padding-bottom:60px}
@@ -142,12 +142,12 @@
   /* cta */
   .cta{
     text-align:center;
-    background:linear-gradient(180deg,var(--sand) 0%,#e3efec 100%);
+    background:linear-gradient(180deg,var(--sand) 0%,#eadccb 100%);
   }
   .cta p{font-size:15px}
   .seat{display:inline-block;margin-top:16px;color:var(--coral);font-weight:700}
 
-  footer{text-align:center;padding:40px 0 100px;font-size:12px;color:var(--muted);background:#e3efec}
+  footer{text-align:center;padding:40px 0 100px;font-size:12px;color:var(--muted);background:#eadccb}
 
   /* fixed button (mobile) */
   .fixed{
@@ -175,18 +175,19 @@
   <svg class="silk" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <defs>
       <linearGradient id="s1" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#3e7f86" stop-opacity=".0"/>
-        <stop offset=".3" stop-color="#3e7f86" stop-opacity=".18"/>
-        <stop offset="1" stop-color="#3e7f86" stop-opacity=".05"/>
+        <stop offset="0" stop-color="#5f9a94" stop-opacity="0"/>
+        <stop offset=".3" stop-color="#5f9a94" stop-opacity=".30"/>
+        <stop offset="1" stop-color="#5f9a94" stop-opacity=".08"/>
       </linearGradient>
       <linearGradient id="s2" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#e8957a" stop-opacity="0"/>
-        <stop offset=".4" stop-color="#e8957a" stop-opacity=".16"/>
-        <stop offset="1" stop-color="#e8957a" stop-opacity=".04"/>
+        <stop offset="0" stop-color="#c98a8f" stop-opacity="0"/>
+        <stop offset=".4" stop-color="#c98a8f" stop-opacity=".30"/>
+        <stop offset="1" stop-color="#c98a8f" stop-opacity=".08"/>
       </linearGradient>
     </defs>
     <path d="M300 -20 C 290 200, 360 320, 320 520 C 300 620, 340 720, 330 820 L 370 820 C 380 720, 345 620, 362 520 C 400 320, 330 200, 340 -20 Z" fill="url(#s1)" style="animation:sway 9s ease-in-out infinite"/>
     <path d="M250 -20 C 260 180, 220 360, 270 540 C 290 640, 260 740, 268 820 L 292 820 C 286 740, 312 640, 294 540 C 250 360, 290 180, 276 -20 Z" fill="url(#s2)" style="animation:sway2 11s ease-in-out infinite"/>
+    <path d="M60 -20 C 70 160, 40 300, 78 470 C 92 560, 70 660, 76 820 L 94 820 C 90 660, 112 560, 98 470 C 64 300, 92 160, 82 -20 Z" fill="#9d86a8" fill-opacity=".14" style="animation:sway 13s ease-in-out infinite"/>
   </svg>
   <div class="wrap">
     <span class="tag">看護師限定｜irodori ヨガ交流会</span>
