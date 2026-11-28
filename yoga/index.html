@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>看護師のためのエアリアルヨガ交流会｜irodori</title>
+<meta name="description" content="12月14日(月)15:00〜 那覇・新都心のshalaで、看護師限定のエアリアルヨガ交流会。布にからだをあずけて、ゆっくり休む時間をつくりませんか。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#f7f2ea;
+    --shell:#fffaf4;
+    --sea:#3e7f86;
+    --sea-deep:#24525a;
+    --mist:#d9ebe8;
+    --coral:#e8957a;
+    --ink:#3a3633;
+    --muted:#7b736b;
+    --line:#e6ddd0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Maru Gothic",sans-serif;
+    color:var(--ink);
+    background:var(--sand);
+    line-height:1.9;
+    letter-spacing:.04em;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+  .mincho{font-family:"Shippori Mincho",serif}
+  .todo{background:#fff2b8;padding:0 4px;border-radius:3px}
+
+  /* hero */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex;align-items:center;
+    overflow:hidden;
+    background:linear-gradient(180deg,#e9f3f1 0%,#f7f2ea 70%);
+  }
+  .hero svg.silk{position:absolute;inset:0;width:100%;height:100%}
+  .hero .wrap{position:relative;z-index:2;padding-top:60px;padding-bottom:60px}
+  .tag{
+    display:inline-block;font-size:13px;color:var(--sea-deep);
+    border:1px solid var(--sea);border-radius:999px;padding:4px 14px;margin-bottom:24px;
+    background:rgba(255,255,255,.6);
+  }
+  .hero h1{
+    font-family:"Shippori Mincho",serif;
+    font-weight:600;
+    font-size:clamp(30px,7vw,46px);
+    line-height:1.5;
+    color:var(--sea-deep);
+    margin-bottom:24px;
+  }
+  .hero p.lead{font-size:16px;color:var(--ink);max-width:30em}
+  .hero .date{
+    margin-top:32px;display:flex;flex-wrap:wrap;gap:8px 20px;
+    font-size:15px;color:var(--sea-deep);font-weight:500;
+  }
+  .btn{
+    display:inline-block;margin-top:36px;
+    background:#06c755;color:#fff;text-decoration:none;
+    font-weight:700;font-size:16px;
+    padding:16px 36px;border-radius:999px;
+    box-shadow:0 6px 18px rgba(6,199,85,.25);
+    transition:transform .2s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn small{display:block;font-size:11px;font-weight:500;opacity:.9}
+
+  section{padding:88px 0}
+  h2{
+    font-family:"Shippori Mincho",serif;font-weight:600;
+    font-size:clamp(22px,5vw,28px);color:var(--sea-deep);
+    line-height:1.6;margin-bottom:32px;
+  }
+  h2 .en{display:block;font-family:"Zen Maru Gothic",sans-serif;font-size:12px;letter-spacing:.2em;color:var(--coral);margin-bottom:8px}
+
+  /* voice */
+  .voice{background:var(--shell)}
+  .checks{list-style:none;display:grid;gap:14px}
+  .checks li{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:16px 20px 16px 52px;position:relative;font-size:15px;
+  }
+  .checks li::before{
+    content:"";position:absolute;left:20px;top:50%;transform:translateY(-50%);
+    width:18px;height:18px;border-radius:50%;
+    background:var(--mist);border:2px solid var(--sea);
+  }
+  .after{margin-top:32px;font-size:15px}
+
+  /* about aerial */
+  .about p{margin-bottom:18px;font-size:15px}
+  .points{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:32px}
+  .point{background:#fff;border-radius:16px;padding:24px 20px;border:1px solid var(--line)}
+  .point .num{font-family:"Shippori Mincho",serif;font-size:28px;color:var(--coral);line-height:1}
+  .point h3{font-size:16px;color:var(--sea-deep);margin:10px 0 6px}
+  .point p{font-size:14px;color:var(--muted);margin:0}
+
+  /* flow */
+  .flow{background:var(--mist)}
+  .timeline{list-style:none;position:relative;padding-left:28px}
+  .timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--sea);opacity:.35}
+  .timeline li{position:relative;margin-bottom:28px}
+  .timeline li::before{
+    content:"";position:absolute;left:-27px;top:8px;width:14px;height:14px;border-radius:50%;
+    background:var(--shell);border:3px solid var(--sea);
+  }
+  .timeline .time{font-weight:700;color:var(--sea-deep);font-size:15px}
+  .timeline p{font-size:14px;color:var(--ink)}
+
+  /* info */
+  .info dl{background:#fff;border-radius:18px;border:1px solid var(--line);overflow:hidden}
+  .info .row{display:grid;grid-template-columns:110px 1fr;border-bottom:1px solid var(--line)}
+  .info .row:last-child{border-bottom:none}
+  .info dt{background:var(--shell);padding:16px;font-weight:700;font-size:14px;color:var(--sea-deep)}
+  .info dd{padding:16px;font-size:14px}
+  .note{margin-top:20px;font-size:13px;color:var(--muted)}
+  .note li{margin-left:1.2em;margin-bottom:4px}
+
+  /* message */
+  .message{background:var(--shell)}
+  .message .box{border-left:3px solid var(--coral);padding-left:24px}
+  .message p{font-size:15px;margin-bottom:18px}
+  .message .sign{font-size:14px;color:var(--muted);margin-top:24px}
+
+  /* faq */
+  .faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;padding:0 20px}
+  .faq summary{cursor:pointer;padding:18px 0;font-weight:500;font-size:15px;list-style:none;position:relative;padding-right:24px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";position:absolute;right:0;top:16px;color:var(--sea);font-size:20px}
+  .faq details[open] summary::after{content:"−"}
+  .faq details p{padding:0 0 18px;font-size:14px;color:var(--ink)}
+
+  /* cta */
+  .cta{
+    text-align:center;
+    background:linear-gradient(180deg,var(--sand) 0%,#e3efec 100%);
+  }
+  .cta p{font-size:15px}
+  .seat{display:inline-block;margin-top:16px;color:var(--coral);font-weight:700}
+
+  footer{text-align:center;padding:40px 0 100px;font-size:12px;color:var(--muted);background:#e3efec}
+
+  /* fixed button (mobile) */
+  .fixed{
+    position:fixed;left:0;right:0;bottom:0;z-index:10;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    background:rgba(255,250,244,.94);backdrop-filter:blur(6px);
+    border-top:1px solid var(--line);text-align:center;
+    transform:translateY(100%);transition:transform .3s;
+  }
+  .fixed.show{transform:none}
+  .fixed a{display:block;background:#06c755;color:#fff;text-decoration:none;font-weight:700;padding:14px;border-radius:999px;max-width:420px;margin:0 auto}
+
+  .fade{opacity:0;transform:translateY(16px);transition:opacity .8s,transform .8s}
+  .fade.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}.silk path{animation:none!important}}
+
+  @keyframes sway{0%,100%{transform:translateX(0)}50%{transform:translateX(14px)}}
+  @keyframes sway2{0%,100%{transform:translateX(0)}50%{transform:translateX(-10px)}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <svg class="silk" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="s1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3e7f86" stop-opacity=".0"/>
+        <stop offset=".3" stop-color="#3e7f86" stop-opacity=".18"/>
+        <stop offset="1" stop-color="#3e7f86" stop-opacity=".05"/>
+      </linearGradient>
+      <linearGradient id="s2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#e8957a" stop-opacity="0"/>
+        <stop offset=".4" stop-color="#e8957a" stop-opacity=".16"/>
+        <stop offset="1" stop-color="#e8957a" stop-opacity=".04"/>
+      </linearGradient>
+    </defs>
+    <path d="M300 -20 C 290 200, 360 320, 320 520 C 300 620, 340 720, 330 820 L 370 820 C 380 720, 345 620, 362 520 C 400 320, 330 200, 340 -20 Z" fill="url(#s1)" style="animation:sway 9s ease-in-out infinite"/>
+    <path d="M250 -20 C 260 180, 220 360, 270 540 C 290 640, 260 740, 268 820 L 292 820 C 286 740, 312 640, 294 540 C 250 360, 290 180, 276 -20 Z" fill="url(#s2)" style="animation:sway2 11s ease-in-out infinite"/>
+  </svg>
+  <div class="wrap">
+    <span class="tag">看護師限定｜irodori ヨガ交流会</span>
+    <h1>布にからだを<br>あずけて、<br>なにも考えない<br>1時間を。</h1>
+    <p class="lead">夜勤明けも、休みの日も、頭のどこかで患者さんのことを考えてる。そんな看護師さんに向けた、エアリアルヨガの交流会です。</p>
+    <div class="date">
+      <span>📅 2026年12月14日(月)</span>
+      <span>🕒 15:00〜16:00</span>
+      <span>📍 那覇・新都心 shala</span>
+      <span>参加費無料・定員6名</span>
+    </div>
+    <a class="btn" href="https://lin.ee/8E355Sc" target="_blank" rel="noopener">LINEで申し込む<small>irodori+ 公式LINEにつながります</small></a>
+  </div>
+</header>
+
+<!-- VOICE -->
+<section class="voice">
+  <div class="wrap fade">
+    <h2><span class="en">FOR YOU</span>こんな日、ありませんか。</h2>
+    <ul class="checks">
+      <li>休みの日なのに、気づいたら一日寝て終わってる</li>
+      <li>肩と腰がずっと重い。湿布が手放せない</li>
+      <li>職場以外の看護師と話す機会がほとんどない</li>
+      <li>ヨガは気になるけど、体がかたいし一人だと行きづらい</li>
+    </ul>
+    <p class="after">ひとつでも当てはまったら、来てほしいです。<br>がんばるための場所じゃなくて、ちゃんと休むための場所にしたいと思っています。</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap fade">
+    <h2><span class="en">AERIAL YOGA</span>エアリアルヨガって？</h2>
+    <p>天井から吊るした布（ハンモック）を使うヨガです。布に体重をあずけるので、床のヨガより関節への負担が少なく、ふだん自分では伸ばせないところまで、ゆっくりほぐれていきます。</p>
+    <p>最後は布の中にすっぽり包まれて横になる時間も。ゆらゆら揺れながら、何も考えずにいられる時間です。</p>
+    <div class="points">
+      <div class="point"><div class="num">01</div><h3>はじめてでも大丈夫</h3><p>インストラクターが一人ずつ見てくれます。体のかたさは気にしなくてOK。</p></div>
+      <div class="point"><div class="num">02</div><h3>少人数で</h3><p>顔が見える人数でやるので、終わったあとも自然に話せます。</p></div>
+      <div class="point"><div class="num">03</div><h3>看護師だけ</h3><p>説明しなくても伝わる話ができる。それだけで、だいぶ楽です。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow">
+  <div class="wrap fade">
+    <h2><span class="en">SCHEDULE</span>当日の流れ</h2>
+    <ol class="timeline">
+      <li><div class="time">14:45　受付</div><p>動きやすい服で来てください。少し早めに来てもらえると、ゆっくり準備できます。</p></li>
+      <li><div class="time">15:00〜16:00　エアリアルヨガ（60分）</div><p>呼吸を整えるところから、ゆっくりスタート。最後は布に包まれて横になる時間もあります。</p></li>
+      <li><div class="time">16:00〜　近くのカフェでおしゃべり</div><p>時間がある人だけで大丈夫です。shalaの近くのカフェに移動して、職場のこと、働き方のこと、なんでも話しましょう。飲み物代は各自でお願いします。すぐ帰る人もお気軽に。</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="info">
+  <div class="wrap fade">
+    <h2><span class="en">INFORMATION</span>開催概要</h2>
+    <dl>
+      <div class="row"><dt>日時</dt><dd>2026年12月14日(月) 15:00〜16:00（レッスン60分）</dd></div>
+      <div class="row"><dt>場所</dt><dd>shala<br>那覇市銘苅2-5-2 シュガーヒル1階<br><a href="https://www.google.com/maps/search/?api=1&query=那覇市銘苅2-5-2+シュガーヒル" target="_blank" rel="noopener" style="color:var(--sea)">Googleマップで見る</a></dd></div>
+      <div class="row"><dt>対象</dt><dd>看護師（准看護師・休職中の方もOK）</dd></div>
+      <div class="row"><dt>定員</dt><dd>6名（先着順）</dd></div>
+      <div class="row"><dt>参加費</dt><dd>無料</dd></div>
+      <div class="row"><dt>持ち物</dt><dd>動きやすい服（ファスナーや金具のないもの）、タオル、飲み物</dd></div>
+      <div class="row"><dt>申込み</dt><dd>irodori+ 公式LINEで「ヨガ参加」と送ってください</dd></div>
+    </dl>
+    <ul class="note">
+      <li>妊娠中の方、高血圧・緑内障・最近手術を受けた方などは参加できない場合があります。気になる方は事前にご相談ください。</li>
+      <li>アクセサリーや時計は外して参加してください（布を傷めるため）。</li>
+      <li>ネイルが長い方はご相談ください。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- MESSAGE -->
+<section class="message">
+  <div class="wrap fade">
+    <h2><span class="en">MESSAGE</span>主催者より</h2>
+    <div class="box">
+      <p>はじめまして。訪問看護師の浜元新菜です。<br>看護師7年目。病院、訪問看護、救護の現場で働いてきました。</p>
+      <p>沖縄で看護師が長く働き続けられる職場を増やしたくて、irodoriという会社を立ち上げました。</p>
+      <p>そのためにまず、現場で働く看護師さんの声を直接聞きたいと思っています。と言っても、かしこまった話をするつもりはありません。一緒にからだをゆるめて、終わったあとにお茶でも飲みながら話せたらうれしいです。</p>
+      <p class="sign">株式会社irodori 代表　浜元新菜</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap fade">
+    <h2><span class="en">Q&amp;A</span>よくある質問</h2>
+    <details><summary>ヨガ未経験、体もかたいです。</summary><p>大丈夫です。エアリアルヨガは布が体を支えてくれるので、かたい人ほど「伸びる感じ」がわかりやすいと言われています。</p></details>
+    <details><summary>一人で参加してもいいですか？</summary><p>もちろんです。ほとんどの方が一人参加の予定です。主催の私も現場にいるので、声をかけてください。</p></details>
+    <details><summary>高いところが苦手です。</summary><p>布は床から近い高さに設定します。足がつく高さで行うので、こわさはほとんどありません。</p></details>
+    <details><summary>何かの勧誘はありますか？</summary><p>ありません。irodori+（看護師の単発バイト紹介）のことを聞かれたらお話ししますが、こちらから案内することはしません。</p></details>
+    <details><summary>キャンセルしたいときは？</summary><p>参加費は無料なのでキャンセル料はかかりません。定員6名で待っている方がいるかもしれないので、行けなくなったら早めに公式LINEで教えてください。</p></details>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap fade">
+    <h2><span class="en">JOIN US</span>12月14日、shalaで<br>待っています。</h2>
+    <p>申込みはLINEで「ヨガ参加」と送るだけ。<br>わからないことも、LINEで気軽に聞いてください。</p>
+    <span class="seat">参加費無料・定員6名・先着順</span><br>
+    <a class="btn" href="https://lin.ee/8E355Sc" target="_blank" rel="noopener">LINEで申し込む<small>irodori+ 公式LINEにつながります</small></a>
+  </div>
+</section>
+
+<footer>
+  <p>主催：株式会社irodori（irodori+）</p>
+  <p>© 2026 irodori</p>
+</footer>
+
+<div class="fixed" id="fixed"><a href="https://lin.ee/8E355Sc" target="_blank" rel="noopener">LINEで申し込む</a></div>
+
+<script>
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+  const fx=document.getElementById('fixed'),hero=document.querySelector('.hero');
+  new IntersectionObserver(([e])=>fx.classList.toggle('show',!e.isIntersecting)).observe(hero);
+</script>
+</body>
+</html>
